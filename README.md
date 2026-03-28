@@ -80,3 +80,4 @@ erDiagram
   notes }o--o{ employee_events : ""
 ```
 Small change
+
