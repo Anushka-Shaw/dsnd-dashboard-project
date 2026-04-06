@@ -28,7 +28,7 @@ class QueryBase(QueryMixin):
     # This method should return a pandas dataframe
     # YOUR CODE HERE
     def event_counts(self, id):
-        sql=f'SELECT event_date, SUM(positive_events)AS positive_events, SUM(negative_events)AS negative_events FROM {self.name}_events WHERE {self.name}_id={id} GROUP BY event_date ORDER BY event_date'
+        sql=f'SELECT event_date, SUM(positive_events)AS positive_events, SUM(negative_events)AS negative_events FROM employee_events WHERE {self.name}_id={id} GROUP BY event_date ORDER BY event_date'
         df=self.pandas_query(sql)
         return df
         # QUERY 1

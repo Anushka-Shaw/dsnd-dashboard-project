@@ -110,7 +110,7 @@ class LineChart(MatplotlibViz):
         # Use the .cumsum method to change the data
         # in the dataframe to cumulative counts
         #### YOUR CODE HERE
-        df = df.cumsum()
+        df = df.astype(float).cumsum()
         
         # Set the dataframe columns to the list
         # ['Positive', 'Negative']
@@ -297,7 +297,7 @@ report = Report()
     #### YOUR CODE HERE
 @app.get('/')
 def root():
-    return report(1, Employee())
+    return report('1', Employee())
 
 # Create a route for a get request
 # Set the route's path to receive a request
